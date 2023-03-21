@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>自动跳转页面</title>
+    <style>
+      body {
+        width: 100vw;
+      }
+      .content {
+        width: 100%;
+        margin: 100px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>QAChat 网址已迁移</h1>
+      <div>
+        本页面将在 <span id="countdown">10</span> 秒后自动跳转到永久链接
+        <a href="https://qachat.vercel.app/">https://qachat.vercel.app/</a>
+      </div>
+      <p>需要翻墙</p>
+      <p>需要翻墙</p>
+      <p>需要翻墙</p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var count = 10; //倒计时秒数
+    var interval = setInterval(function () {
+      count--;
+      if (count == 0) {
+        clearInterval(interval);
+        // window.location.href = "https://qachat.vercel.app/"; //要跳转的网站链接
+      } else {
+        document.getElementById("countdown").innerHTML = count; //显示倒计时
+      }
+    }, 1000);
+  </script>
+</html>
